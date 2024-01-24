@@ -17,7 +17,11 @@ const Calculator = () => {
       setResult('');
     } else if (value === '+/-') {
       setInput((prevInput) => (parseFloat(prevInput) * -1).toString());
-    } else {
+    }
+    else if (value === '%') {
+      setInput((prevInput) => (parseFloat(prevInput) / 100).toString());
+    }
+     else {
       var check = input+value
             if(check == '1+3+9'){
               Alert.alert(
